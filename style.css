@@ -53,7 +53,8 @@ body {
 	font-family: Poppins, sans-serif;
 	font-size: 100%;
 	color: white;
-	background-color: rgb(24, 23, 23);
+	background-color: rgb(34, 32, 32);
+	width: 100%;
 	line-height: normal;
 }
 
@@ -66,11 +67,6 @@ a {
 	color: white;
 }
 a:hover {color:#dc965a;}
-
-.container {
-	width: 100%;
-	background-color: rgb(34, 32, 32);
-}
 
 .top {
 	background-image: url("bg-1.jpg");
@@ -382,7 +378,7 @@ a:hover {color:#dc965a;}
 	width: fit-content;
 	max-width: 600px;
 	min-width: 400px;
-	margin: 2em auto;
+	margin: 10px auto;
 	height: fit-content;
 	padding: 10px;
 	background-color: #1c1d23;
@@ -424,14 +420,13 @@ a:hover {color:#dc965a;}
 @media only screen and (min-width: 800px) {
 .hidden-table {
 	display: none;
-}
+ }
 }
 
 @media only screen and (max-width: 800px) {
-	.container, .top, .wrapper,.wrapper2, .wrapper3, .wrapper4,.footer {
-		box-sizing: border-box;
-		margin: 0px;
-		width: 100%;
+	.navi {
+		width: fit-content;
+		margin: 10px 10px;
 	}
 	.top {
 		min-height: 500px;
@@ -453,7 +448,6 @@ a:hover {color:#dc965a;}
 		margin: 2em auto;
 		box-sizing: border-box;
 		padding: auto;
-		background-color: aquamarine;
 	}
 	.profil {
 		display: block;
@@ -464,7 +458,6 @@ a:hover {color:#dc965a;}
 	}
 	.ciee {
 		display: block;
-		background-color: black;
 		margin: 10px auto;
 		width: fit-content;
 	}
@@ -498,5 +491,37 @@ a:hover {color:#dc965a;}
 	.flexedu {
 		display: block;
 	}
+	.contact {
+		min-width: none;
+	}
+}
 
+@media only screen and (max-width: 480px) {
+	.skill-box {
+		width: 90%;
+	}
+	.my-skill {
+		width: 90%;
+	}
+	.flexedu {
+		width: fit-content;
+	}
+	.contact {
+		min-width: none;
+		box-sizing: border-box;
+	}
+	.list-contact {
+		padding: 5px;
+		margin: 5px;
+		box-sizing: border-box;
+	}
+	.box-contact {
+		margin: auto;
+	}
+	.box-contact tr td {
+		padding: 0px 5px;
+	}
+	.break-ah {
+		word-break:break-all;
+	}
 }
