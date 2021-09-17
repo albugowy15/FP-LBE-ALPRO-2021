@@ -496,7 +496,7 @@ a:hover {color:#dc965a;}
 	}
 }
 
-@media only screen and (max-width: 480px) {
+@media only screen and (max-width: 800px) {
 	.skill-box {
 		width: 90%;
 	}
