@@ -8,4 +8,4 @@ Nama : Mohamad Kholid Bughowi
 NRP : 5025201253
 
 <br/>
-https://cv-bughowy.netlify.app
+https://cv-bughowi.netlify.app
