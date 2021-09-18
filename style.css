@@ -63,7 +63,6 @@ table {
 .light-theme {
 	--primary-color: white;
     --secondary-color: white;
-    --third-color: #dc965a;
     --four-color: black;
     --circle-color: #131416;
     --five-color:  #fff5ec;
@@ -203,6 +202,8 @@ a:hover {color: var(--third-color);}
 	left: 20px;
 	bottom: 20px;
 	font-size: 110%;
+	box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+	border-radius: 50%;
 }
 
 #fab .fa {
@@ -212,6 +213,7 @@ a:hover {color: var(--third-color);}
 	text-decoration: none;
 	border-radius: 50%;
 	background-color: var(--four-color);
+	box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
 
 /* Foto Profil and Biodata */
@@ -474,20 +476,19 @@ a:hover {color: var(--third-color);}
 	.data {margin-top: 10px;}
 	.my-skill {
 		display: block;
-		width: 70%;
+		width: 90%;
 	}
 	.skill-box {
 		padding: 30px;
-		width: 80%;
+		width: 90%;
 		max-width: none;
 		margin: 15px auto;
 		text-overflow: unset;
 	}
-	.flexedu {display: block;}
-	.contact {min-width: none;}
-	.skill-box {width: 90%;}
-	.my-skill {width: 90%;}
-	.flexedu {width: fit-content;}
+	.flexedu {
+		display: block;
+		width: fit-content;
+	}
 	.contact {
 		min-width: none;
 		box-sizing: border-box;
