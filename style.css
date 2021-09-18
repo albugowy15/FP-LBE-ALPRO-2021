@@ -205,7 +205,6 @@ a:hover {color: var(--third-color);}
 	box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 	border-radius: 50%;
 }
-
 #fab .fa {
 	padding: 10px;
 	width: 17px;
@@ -229,10 +228,10 @@ a:hover {color: var(--third-color);}
 	background: linear-gradient(270deg, var(--seven-color) 60%, var(--eight-color) 60%);
 }
 .profil {
-	width: 80%;
+	width: 90%;
 	padding: 5px;
 	display: flex;
-	margin: 2em auto;
+	margin: 10px auto;
 	flex-wrap: wrap;
 	justify-content: center;
 	align-items: center;
@@ -458,11 +457,24 @@ a:hover {color: var(--third-color);}
 		display: block;
 		margin: auto;
 	}
+	.data {
+		margin: 5px auto;
+		padding: 2px;
+	}
+	.data h1 {
+		font-size: 150%;
+	}
+	.data h2 {
+		font-size: 110%;
+	}
+	.data p {
+		line-height: 1.5em;
+	}
 	.profpic {margin: auto;}
 	.ciee {
 		display: block;
-		margin: 10px auto;
-		width: fit-content;
+		margin: 10px 0px;
+		width: 100%;
 	}
 	.ciee1, .ciee2 {
 		margin: auto;
@@ -470,7 +482,7 @@ a:hover {color: var(--third-color);}
 	}
 	.hidden-table {
 		display: block;
-		margin: auto;
+		margin: 0px;
 	}
 	.hidden-table tr td {padding: 0px 20px;}
 	.data {margin-top: 10px;}
@@ -492,6 +504,7 @@ a:hover {color: var(--third-color);}
 	.contact {
 		min-width: none;
 		box-sizing: border-box;
+		height: max-content;
 	}
 	.list-contact {
 		padding: 5px;
