@@ -101,7 +101,7 @@ a:hover {color: var(--third-color);}
 	background-image: url("bg-1.jpg");
         background-position: center center;
         background-repeat: no-repeat;
-        background-attachment: fixed;
+        background-size: cover;
 	width: 100%;
 	height: fit-content;
 	min-height: 700px;
