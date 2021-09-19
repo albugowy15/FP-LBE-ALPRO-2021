@@ -104,43 +104,59 @@ a:hover {color: var(--third-color);}
 	background-repeat: no-repeat;
     background-size: cover;
 	width: 100%;
-	height: fit-content;
+	height: 100vh;
 	min-height: 700px;
-	padding: 10px;
+	padding: 0px;
 	box-sizing: border-box;
 	position: relative;
 }
-.navi {
-	height: 9%;
-	margin: auto;
-	width: 100%;
-	padding: 0px;
-	display: flex;
-	justify-content: space-between;
+.main-nav {
+	height: 90px;
 }
-.name {
+.logo {
+	color: var(--four-color);
+	line-height: 90px;
+	font-size: 30px;
+	font-weight: bold;
+	text-decoration: none;
+	margin-left: 30px;
+}  
+.navlinks {
+	list-style: none;
+	float: right;
+	line-height: 90px;
+	margin: 0;
+	padding: 0;
+}  
+.navlinks li {
+	display: inline-block;
+	margin: 0 20px;
+}
+.navlinks li a {
+	color:var(--four-color);
+	text-decoration: none;
+	font-size: 18px;
+	text-transform: uppercase;
+	transition: all 0.3s linear 0s;
+}
+.navlinks li a:hover {
+	color: var(--third-color);
+	padding-bottom: 7px;
+	border-bottom: 2px solid var(--third-color);
+}
+.menu-btn {
+	color: var(--four-color);
 	font-size: 25px;
-	font-weight: bold;
-	margin: auto;
-	width: 45%;
+	float: right;
+	line-height: 90px;
+	margin-right: 40px;
+	cursor: pointer;
+	display: none;
+}  
+#isChecked {
+	display: none;
 }
-
-.name a {
-	color: var(--custom-color);
-}
-.link {
-	width: 40%;
-	margin: auto;
-	padding: 0px 0px;
-	font-size: 120%;
-	display: flex;
-	justify-content: space-between;
-	align-content: flex-end;
-}
-.link a {
-	color: var(--custom-color);
-	font-weight: bold;
-}
+  
 .hello {
 	margin: auto;
 	margin-top: 50px;
@@ -176,6 +192,7 @@ a:hover {color: var(--third-color);}
 	margin-right: 10px;
 	margin-bottom: 10px;
 	font-size: 110%;
+	z-index: 1;
 }
 .social-media .fa {
 	padding: 10px;
@@ -241,7 +258,7 @@ a:hover {color: var(--third-color);}
 	flex: 1;
 	max-width: 450px;
 	max-height: 800px;
-	min-height: 600px;
+	height: 600px;
 	padding: 100px;
 	background-image: url("profil2.jpg");
 	background-size: cover;
@@ -398,9 +415,7 @@ a:hover {color: var(--third-color);}
 	background: linear-gradient(270deg, var(--seven-color) 60%, var(--eight-color) 60%);
 }
 .contact {
-	width: fit-content;
 	max-width: 600px;
-	min-width: 400px;
 	margin: 10px auto;
 	height: fit-content;
 	padding: 10px;
@@ -409,7 +424,7 @@ a:hover {color: var(--third-color);}
 	box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
 .contact h2 {
-	font-size: 200%;
+	font-size: 150%;
 	font-weight: bold;
 	text-align: center;
 	margin: auto;
@@ -417,15 +432,21 @@ a:hover {color: var(--third-color);}
 	border-bottom: 5px solid var(--third-color);
 	width: fit-content;
 }
-.desc-contact {text-align: center;}
+.desc-contact {
+	text-align: center;
+	font-size: 100%;
+}
+
 .box-contact {
 	margin: auto;
 	width: fit-content;
+	font-size: 100%;
 }
 .list-contact {
 	padding: 1em 2em;
 	margin: 1em;
 	font-weight: bold;
+	font-size: 100%;
 	color: var(--third-color);
 }
 .footer {
@@ -440,19 +461,31 @@ a:hover {color: var(--third-color);}
 }
 
 @media only screen and (max-width: 800px) {
-	.navi {
-		display: none;
-	}
 	.top {min-height: 500px;}
+	.navlinks {
+		position: fixed;
+	  	width: 100%;
+	  	height: 100vh;
+	  	text-align: center;
+	  	background: var(--secondary-color);
+	  	right: -100%;
+	  	transition: all 0.5s;
+		z-index: 2;
+	}
+	.logo {font-size: 120%;}
+	.main-nav {height: 10vh;}
+	.navlinks li {display: block;}
+	.navlinks li a {font-size: 110%;}
+	.navlinks li a:hover {border-bottom: none;}
+	.menu-btn {display: block;}
+	#isChecked:checked ~ .navlinks {right: 0;}
 	.hello p{font-size: 180%;}
 	.hello {
 		margin: 1em auto;
 		box-sizing: border-box;
 		padding: auto;
 	}
-	.wrapper, .wrapper4{
-		background: var(--wrapper-color);
-	}
+	.wrapper, .wrapper4{background: var(--wrapper-color);}
 	.profil {
 		display: block;
 		margin: auto;
@@ -461,15 +494,9 @@ a:hover {color: var(--third-color);}
 		margin: 5px auto;
 		padding: 2px;
 	}
-	.data h1 {
-		font-size: 150%;
-	}
-	.data h2 {
-		font-size: 110%;
-	}
-	.data p {
-		line-height: 1.5em;
-	}
+	.data h1 {font-size: 150%;}
+	.data h2 {font-size: 110%;}
+	.data p {line-height: 1.5em;}
 	.profpic {margin: auto;}
 	.ciee {
 		display: block;
@@ -501,17 +528,27 @@ a:hover {color: var(--third-color);}
 		display: block;
 		width: fit-content;
 	}
-	.contact {
-		min-width: none;
-		box-sizing: border-box;
-		height: max-content;
-	}
-	.list-contact {
-		padding: 5px;
-		margin: 5px;
-		box-sizing: border-box;
-	}
 	.box-contact {margin: auto;}
 	.box-contact tr td {padding: 0px 5px;}
 	.break-ah {word-break:break-all;}
+}
+
+@media only screen and (max-width: 450px) {
+	.profpic {
+		height: 380px;
+	}
+}
+
+@media (max-width: 350px) {
+	.profpic {
+		height: 330px;
+	}
+	.logo {
+		margin-left: 15px;
+	  	font-size: 25px;
+	}
+	.menu-btn {
+	  	margin-right: 15px;
+	  	font-size: 25px;
+	}
 }
