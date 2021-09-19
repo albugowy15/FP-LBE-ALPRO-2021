@@ -3,9 +3,9 @@ var bg = document.getElementById("top");
 icon.onclick = function() {
     document.body.classList.toggle("light-theme");
     if(document.body.classList.contains("light-theme")) {
-        bg.style.backgroundImage = "url('bg-2.jpg')";
+        bg.style.backgroundImage = "url('/bg/bg-2.jpg')";
     } else {
-        bg.style.backgroundImage = "url('bg-1.jpg')";
+        bg.style.backgroundImage = "url('/bg/bg-1.jpg')";
     }
 }
 
@@ -27,11 +27,3 @@ function closeMenu() {
     hamburger.classList.remove("active");
     navMenu.classList.remove("active");
 }
-
-const message = function() {
-    return document.getElementById("hello").innerHTML = "Welcome!!"
-}
-
-;(function () {
-    setTimeout(message, 5000);
-  })()

@@ -24,15 +24,9 @@ article, aside, details, figcaption, figure,
 footer, header, hgroup, menu, nav, section {
 	display: block;
 }
-body {
-	line-height: 1;
-}
-ol, ul {
-	list-style: none;
-}
-blockquote, q {
-	quotes: none;
-}
+body {line-height: 1;}
+ol, ul {list-style: none;}
+blockquote, q {quotes: none;}
 blockquote:before, blockquote:after,
 q:before, q:after {
 	content: '';
@@ -56,7 +50,6 @@ table {
     --seven-color: #131416;
     --eight-color: #1a1a1a;
     --nine-color: rgb(37, 37, 39);
-	--custom-color: white;
 	--wrapper-color: #1a1a1a;
 }
 
@@ -68,15 +61,12 @@ table {
     --five-color:  #fff5ec;
     --six-color: #1c1d24;
     --seven-color: #ffffff;
-    --eight-color: #dc965a;
+    --eight-color: rgb(190, 192, 194);
 	--nine-color: rgb(192, 192, 192);
-	--custom-color: #dc965a;
 	--wrapper-color: #eaeaea;
 }
 
-html {
-	scroll-behavior: smooth;
-}
+html {scroll-behavior: smooth;}
 
 body {
 	font-family: Poppins, sans-serif;
@@ -96,10 +86,11 @@ a {
 	color: var(--four-color);
 }
 a:hover {color: var(--third-color);}
+h2 {font-size: 150%;}
 
 /* Header */
 .top {
-	background-image: url("bg-1.jpg");
+	background-image: url("/bg/bg-1.jpg");
     background-position: center center;
 	background-repeat: no-repeat;
     background-size: cover;
@@ -257,7 +248,7 @@ a:hover {color: var(--third-color);}
 	max-height: 800px;
 	height: 600px;
 	padding: 100px;
-	background-image: url("profil2.jpg");
+	background-image: url("/profil/profil2.jpg");
 	background-size: cover;
 	background-repeat: no-repeat;
 	background-position: center center;
@@ -276,7 +267,6 @@ a:hover {color: var(--third-color);}
 	font-size: 250%;
 	font-weight: bold;
 }
-.data h2 {font-size: 160%;}
 .data p {line-height: 2em;}
 .ciee {
 	display: flex;
@@ -308,9 +298,14 @@ a:hover {color: var(--third-color);}
 	box-sizing: border-box;
 }
 .wrapper2 h1{
-	font-size: 300%;
+	font-size: 220%;
+	border-bottom: 5px solid var(--third-color);
 	font-weight: bold;
 	text-align: center;
+	width: fit-content;
+	margin: auto;
+	margin-bottom: 10px;
+	box-sizing: border-box;
 }
 .wrapper2 p {
 	color: var(--six-color);
@@ -340,7 +335,6 @@ a:hover {color: var(--third-color);}
 .skill-box p {text-align: left;}
 .skill-box h2 {
 	font-weight: bold;
-	font-size: 150%;
 	border-bottom: 5px solid var(--third-color);
 }
 .skill-box img {margin-bottom: 1.5em;}
@@ -366,7 +360,6 @@ a:hover {color: var(--third-color);}
 	margin: 5px;
 }
 .education h2, .experience h2{
-	font-size: 150%;
 	font-weight: bold;
 	border-bottom: 5px solid var(--third-color);
 	width: fit-content;
@@ -421,7 +414,6 @@ a:hover {color: var(--third-color);}
 	box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
 .contact h2 {
-	font-size: 150%;
 	font-weight: bold;
 	text-align: center;
 	margin: auto;
