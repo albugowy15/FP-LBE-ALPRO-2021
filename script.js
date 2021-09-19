@@ -9,15 +9,23 @@ icon.onclick = function() {
     }
 }
 
-function _scrollTo(curr, id) {
-    let element = document.getElementById(id);
-    let subtractor = 70; // getAdder(id)
+const hamburger = document.querySelector(".hamburger");
+const navMenu = document.querySelector(".nav-menu");
 
-    window.scroll({
-        behavior: 'smooth',
-        left: 0,
-        top: (element) ? element.getBoundingClientRect().top + window.scrollY - subtractor : 0
-    });
+hamburger.addEventListener("click", mobileMenu);
+
+function mobileMenu() {
+    hamburger.classList.toggle("active");
+    navMenu.classList.toggle("active");
+}
+
+const navLink = document.querySelectorAll(".nav-link");
+
+navLink.forEach(n => n.addEventListener("click", closeMenu));
+
+function closeMenu() {
+    hamburger.classList.remove("active");
+    navMenu.classList.remove("active");
 }
 
 const message = function() {

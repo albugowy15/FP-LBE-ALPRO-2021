@@ -110,53 +110,50 @@ a:hover {color: var(--third-color);}
 	box-sizing: border-box;
 	position: relative;
 }
-.main-nav {
-	height: 90px;
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 1.5rem;
 }
-.logo {
-	color: var(--four-color);
-	line-height: 90px;
-	font-size: 30px;
-	font-weight: bold;
-	text-decoration: none;
-	margin-left: 30px;
-}  
-.navlinks {
-	list-style: none;
-	float: right;
-	line-height: 90px;
-	margin: 0;
-	padding: 0;
-}  
-.navlinks li {
-	display: inline-block;
-	margin: 0 20px;
+.hamburger {
+    display: none;
 }
-.navlinks li a {
-	color:var(--four-color);
-	text-decoration: none;
-	font-size: 18px;
-	text-transform: uppercase;
-	transition: all 0.3s linear 0s;
+.nav-menu {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
-.navlinks li a:hover {
-	color: var(--third-color);
-	padding-bottom: 7px;
-	border-bottom: 2px solid var(--third-color);
+
+.nav-item {
+    margin-left: 5rem;
 }
-.menu-btn {
-	color: var(--four-color);
-	font-size: 25px;
-	float: right;
-	line-height: 90px;
-	margin-right: 40px;
-	cursor: pointer;
-	display: none;
-}  
-#isChecked {
-	display: none;
+
+.nav-link{
+    font-size: 150%;
+    font-weight: bold;
+    color: var(--four-color);
 }
-  
+
+.nav-link:hover{
+    color: var(--third-color);
+}
+
+.nav-logo {
+    font-size: 170%;
+    font-weight: bold;
+    color: var(--four-color);
+}
+
+.bar {
+    display: block;
+    width: 25px;
+    height: 3px;
+    margin: 5px auto;
+    -webkit-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+    background-color: var(--four-color);
+}
 .hello {
 	margin: auto;
 	margin-top: 50px;
@@ -462,23 +459,43 @@ a:hover {color: var(--third-color);}
 
 @media only screen and (max-width: 800px) {
 	.top {min-height: 500px;}
-	.navlinks {
-		position: fixed;
-	  	width: 100%;
-	  	height: 100vh;
-	  	text-align: center;
-	  	background: var(--secondary-color);
-	  	right: -100%;
-	  	transition: all 0.5s;
+	.nav-menu {
+        position: fixed;
+        left: -100%;
+        top: 5rem;
+        flex-direction: column;
+        background-color:var(--five-color);
+        width: 100%;
+        border-radius: 10px;
+        text-align: center;
+        transition: 0.3s;
+        box-shadow: 0 10px 27px rgba(0, 0, 0, 0.05);
 		z-index: 2;
-	}
-	.logo {font-size: 120%;}
-	.main-nav {height: 10vh;}
-	.navlinks li {display: block;}
-	.navlinks li a {font-size: 110%;}
-	.navlinks li a:hover {border-bottom: none;}
-	.menu-btn {display: block;}
-	#isChecked:checked ~ .navlinks {right: 0;}
+    }
+
+    .nav-menu.active {
+        left: 0;
+    }
+
+    .nav-item {
+        margin: 2.5rem auto;
+    }
+
+    .hamburger {
+        display: block;
+        cursor: pointer;
+    }
+	.hamburger.active .bar:nth-child(2) {
+        opacity: 0;
+    }
+
+    .hamburger.active .bar:nth-child(1) {
+        transform: translateY(8px) rotate(45deg);
+    }
+
+    .hamburger.active .bar:nth-child(3) {
+        transform: translateY(-8px) rotate(-45deg);
+    }
 	.hello p{font-size: 180%;}
 	.hello {
 		margin: 1em auto;
